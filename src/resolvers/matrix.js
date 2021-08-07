@@ -1,6 +1,6 @@
 const axiosFetcher = require("../fetchers/axiosFetcher");
 
-const movies = async (_, {}) => {
+const matrix = async (_, {}) => {
   const data = await axiosFetcher(
     `http://www.omdbapi.com/?s=Matrix&apikey=720c3666`
   );
@@ -10,4 +10,4 @@ const movies = async (_, {}) => {
   return data;
 };
 
-module.exports = movies;
+module.exports = matrix;

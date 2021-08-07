@@ -1,8 +1,12 @@
-const movies = require("./movies");
+const matrix = require("./matrix");
+const matrixReloaded = require("./matrixReloaded");
+const matrixRevolutions = require("./matrixRevolutions");
 
 const resolvers = {
   Query: {
-    movies,
+    matrix,
+    matrixReloaded,
+    matrixRevolutions,
   },
 };
 

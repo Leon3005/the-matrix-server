@@ -9,7 +9,9 @@ const typeDefs = gql`
     Poster: String
   }
   type Query {
-    movies: [Movie]
+    matrix: [Movie]
+    matrixReloaded: [Movie]
+    matrixRevolutions: [Movie]
   }
 `;
 
