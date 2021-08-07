@@ -6,32 +6,32 @@ const matrixRevolutions = async (_, {}) => {
     `http://www.omdbapi.com/?s=Matrix%20Revolutions&apikey=720c3666`
   );
 
-  console.log(data);
-
   const dataToDb = data.map(async (media) => {
-    if (media.Poster !== "N/A") {
-      const poster = await Poster.create({ poster: media.Poster });
+    try {
+      if (media.Poster !== "N/A") {
+        const poster = await Poster.create({ poster: media.Poster });
 
-      const mediaToCreate = {
-        title: media.Title,
-        year: media.Year,
-        imdbID: media.imdbID,
-        type: media.Type,
-        poster: poster._id,
-      };
+        const mediaToCreate = {
+          title: media.Title,
+          year: media.Year,
+          imdbID: media.imdbID,
+          type: media.Type,
+          poster: poster._id,
+        };
 
-      await Media.create(mediaToCreate);
-    } else {
-      console.log(media.Title);
+        await Media.create(mediaToCreate);
+      } else {
+        const mediaToCreate = {
+          title: media.Title,
+          year: media.Year,
+          imdbID: media.imdbID,
+          type: media.Type,
+        };
 
-      const mediaToCreate = {
-        title: media.Title,
-        year: media.Year,
-        imdbID: media.imdbID,
-        type: media.Type,
-      };
-
-      await Media.create(mediaToCreate);
+        await Media.create(mediaToCreate);
+      }
+    } catch (err) {
+      console.log("Failed to add record to DB. Record may already exist.");
     }
   });
 

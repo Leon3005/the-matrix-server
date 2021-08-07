@@ -4,6 +4,7 @@ const schema = {
   poster: {
     type: String,
     required: true,
+    unique: true,
   },
 };
 

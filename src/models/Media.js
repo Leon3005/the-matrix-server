@@ -4,6 +4,7 @@ const schema = {
   title: {
     type: String,
     required: true,
+    unique: true,
   },
   year: {
     type: String,
@@ -12,6 +13,7 @@ const schema = {
   imdbID: {
     type: String,
     required: true,
+    unique: true,
   },
   type: {
     type: String,
