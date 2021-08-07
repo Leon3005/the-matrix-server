@@ -3,6 +3,7 @@ const { Schema, model } = require("mongoose");
 const schema = {
   poster: {
     type: String,
+    required: true,
   },
 };
 

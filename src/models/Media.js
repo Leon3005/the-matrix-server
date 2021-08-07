@@ -23,8 +23,8 @@ const schema = {
   },
 };
 
-const movieSchema = new Schema(schema);
+const mediaShcema = new Schema(schema);
 
-const Movie = model("Movie", movieSchema);
+const Media = model("Media", mediaShcema);
 
-module.exports = Movie;
+module.exports = Media;

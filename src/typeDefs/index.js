@@ -1,7 +1,7 @@
 const { gql } = require("apollo-server");
 
 const typeDefs = gql`
-  type Movie {
+  type Media {
     Title: String!
     Year: String!
     imdbID: String!
@@ -9,9 +9,9 @@ const typeDefs = gql`
     Poster: String
   }
   type Query {
-    matrix: [Movie]
-    matrixReloaded: [Movie]
-    matrixRevolutions: [Movie]
+    matrix: [Media]
+    matrixReloaded: [Media]
+    matrixRevolutions: [Media]
   }
 `;
 
