@@ -1,3 +1,5 @@
+const movies = require("./movies");
+
 const resolvers = {
   Query: {
     movies,
