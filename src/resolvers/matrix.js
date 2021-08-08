@@ -35,7 +35,7 @@ const matrix = async (_, {}) => {
     }
   });
 
-  console.log(dataToDb);
+  return data;
 };
 
 module.exports = matrix;

@@ -35,7 +35,7 @@ const matrixRevolutions = async (_, {}) => {
     }
   });
 
-  console.log(dataToDb);
+  return data;
 };
 
 module.exports = matrixRevolutions;

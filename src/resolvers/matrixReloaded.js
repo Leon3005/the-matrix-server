@@ -39,7 +39,7 @@ const matrixReloaded = async (_, {}) => {
     }
   });
 
-  console.log(dataToDb);
+  return data;
 };
 
 module.exports = matrixReloaded;
