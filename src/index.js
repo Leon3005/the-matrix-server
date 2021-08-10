@@ -11,7 +11,7 @@ const server = new ApolloServer({
 });
 
 db.once("open", () => {
-  server.listen().then(({ url }) => {
+  server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
     console.log(`Server ready at ${url}`);
   });
 });
